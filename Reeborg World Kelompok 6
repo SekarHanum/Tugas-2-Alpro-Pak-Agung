@@ -75,3 +75,18 @@ while at_goal () == False :
         jump () 
     #jika robot tidak mendeteksi didepan ada tembok. maka robot akan terus berjalan 
     else :
+        move ()
+
+#Hurdle 4 
+#fungsi untuk belok kanan 
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+    
+#fungsi untuk melewati tembok
+def pass_wall():
+    turn_left()
+    count_wall=0
+    #untuk mendeteksi jika ada tembok di sebelah kanan, robot akan menghitung berapa banyak tembok yang sudah dilewati
+
