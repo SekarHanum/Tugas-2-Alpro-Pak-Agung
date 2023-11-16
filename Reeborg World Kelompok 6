@@ -89,4 +89,17 @@ def pass_wall():
     turn_left()
     count_wall=0
     #untuk mendeteksi jika ada tembok di sebelah kanan, robot akan menghitung berapa banyak tembok yang sudah dilewati
+    while wall_on_right():
+        count_wall+=1
+        move()
+    #fungsi untuk puter balik jika robot sudah tidak mendeteksi tembok
+    turn_right()
+    move()
+    turn_right()
+    #untuk mendeteksi jika count wall lebih dari 0 maka robot akan berjalan 1 langkah sampai count wall sama dengan 0 
+    while count_wall >0:
+        move()
+        count_wall-=1
+    #jika count wall sudah sama dengan 0 maka robot akan belok kiri
+    turn_left()
 
