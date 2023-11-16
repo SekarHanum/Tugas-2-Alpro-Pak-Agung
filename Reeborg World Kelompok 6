@@ -67,3 +67,11 @@ def jump () :
     turn_right ()
     move () 
     turn_left () 
+
+#untuk mendeteksi robot sudah mencapai finish apa belom
+while at_goal () == False :
+    #jika robot mendeteksi didepan ada tembok, maka memanggil fungsi jump
+    if wall_in_front() :
+        jump () 
+    #jika robot tidak mendeteksi didepan ada tembok. maka robot akan terus berjalan 
+    else :
