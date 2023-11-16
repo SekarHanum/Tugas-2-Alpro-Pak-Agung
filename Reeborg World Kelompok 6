@@ -103,3 +103,11 @@ def pass_wall():
     #jika count wall sudah sama dengan 0 maka robot akan belok kiri
     turn_left()
 
+#untuk mendeteksi robot sudah mencapai finis apa belom
+while at_goal()==False:
+    #jika robot mendeteksi didepan ada tembok, maka memanggil fungsi pass wall
+    if wall_in_front():
+        pass_wall()
+    #jika robot tidak mendeteksi didepan ada tembok. maka robot akan terus berjalan
+    else:
+        move()
