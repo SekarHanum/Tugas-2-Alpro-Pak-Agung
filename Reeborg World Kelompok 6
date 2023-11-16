@@ -53,3 +53,17 @@ while at_goal () == False :
 
 #Hurdle 3 
 #fungsi untuk belok kanan
+def turn_right () : 
+    turn_left () 
+    turn_left ()
+    turn_left () 
+   
+#fungsi untuk melewati tembok 
+def jump () : 
+    turn_left () 
+    move () 
+    turn_right () 
+    move () 
+    turn_right ()
+    move () 
+    turn_left () 
