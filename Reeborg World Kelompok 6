@@ -39,3 +39,17 @@ def turn_right () :
 #fungsi untuk melewati tembok   
 def jump () : 
     move () 
+turn_left () 
+    move () 
+    turn_right () 
+    move () 
+    turn_right ()
+    move () 
+    turn_left () 
+
+#untuk mendeteksi robot sudah mencapai finish apa belom   
+while at_goal () == False :
+    jump ()
+
+#Hurdle 3 
+#fungsi untuk belok kanan
